@@ -1,7 +1,7 @@
 import { createReader } from "@keystatic/core/reader";
 import configs from "./configs";
 
-const reader = createReader(process.cwd(), configs);
+export const reader = createReader(process.cwd(), configs);
 
 export async function listPosts() {
   const list = await reader.collections.posts.all({ resolveLinkedFiles: true });
