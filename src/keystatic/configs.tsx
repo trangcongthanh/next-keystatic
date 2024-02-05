@@ -13,7 +13,11 @@ const storage: LocalConfig["storage"] | GitHubConfig["storage"] =
       };
 
 export default config({
-  storage,
+  storage: {
+    kind: "github",
+    repo: "trangcongthanh/next-keystatic",
+    branchPrefix: "content/",
+  },
   ui: {
     brand: {
       name: "Th's Bl.g",
