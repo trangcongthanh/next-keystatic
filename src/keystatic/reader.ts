@@ -1,5 +1,5 @@
 import { createReader } from "@keystatic/core/reader";
-import configs from "../../keystatic.config";
+import configs from "./configs";
 
 const reader = createReader(process.cwd(), configs);
 

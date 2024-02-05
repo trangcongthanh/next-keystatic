@@ -3,19 +3,17 @@ import { posts } from "./collections";
 import { aboutMe } from "./singletons/about-me";
 import { settings } from "./singletons/settings";
 
-export const storage: LocalConfig["storage"] | GitHubConfig["storage"] =
+const storage: LocalConfig["storage"] | GitHubConfig["storage"] =
   process.env.NODE_ENV === "development"
     ? { kind: "local" }
     : {
-      kind: "github",
-      repo: "trangcongthanh/thsblg",
-      branchPrefix: "content/",
-    };
+        kind: "github",
+        repo: "trangcongthanh/next-keystatic",
+        branchPrefix: "content/",
+      };
 
 export default config({
-  storage: {
-    kind: "local",
-  },
+  storage,
   ui: {
     brand: {
       name: "Th's Bl.g",
